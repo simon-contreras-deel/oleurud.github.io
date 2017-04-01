@@ -6,13 +6,21 @@
     <meta name="description" content="Homepage of Simon Martin | @oleurud">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon Martin | @oleurud</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
     <style type="text/css">
-        body {font-family: 'Ubuntu', sans-serif}
+        body {
+            font-family: 'Droid Sans Mono', monospace; 
+            font-size: 30px; 
+            line-height: 50%; 
+            background-color:#232323; 
+            color:#ffffff; 
+            text-align: center
+        }
         .container {margin: 0 auto}
         @media (min-width: 500px) {   
             .container {
                 width: 75%;
+                margin-top: 10%
             }
         }
         @media (min-width: 800px) {   
@@ -20,35 +28,34 @@
                 width: 50%;
             }
         }
-        #contact a {padding-right: 10px}
-        h2, a {color: #dd4814}
-        svg {fill: #dd4814}
+        img {width: 32px; height: auto;}
+        a {text-decoration: none; margin:0 5px;}
     </style>
 </head>
 <body>
     <br>
     <div class="container">
-        <div class="col-md-offset-3 col-md-6">
-            <h2>Simon Martin | @oleurud</h2>
-            <ul>
-                <li>I am from <a href="https://es.wikipedia.org/wiki/Duruelo_de_la_Sierra" target="_blank">Duruelo de la Sierra</a> and I am living in Madrid (Spain).</li>
-                <li>I am a software developer since 2008. I code mainly in PHP, Javascript/Nodejs and JAVA. But I can use anothers like Python or C at lower level.</li>
-                <li>I love code, music (from Paco de Lucía to Metallica), Ubuntu, beers and sports.</li>
-                <li>My current passion is the machine learning, so that I have started the <a href="https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013" target="_blank">Self Driving Car at Udacity</a>.</li>
-            </ul>
-            <br>
-            <p id="contact">
-                <a href="https://github.com/oleurud" target="_blank">
-                    <svg height="32" width="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"></path></svg>
-                </a>
-                <a href="https://twitter.com/oleurud" target="_blank">
-                    <svg height="32" width="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"></path></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/oleurud" target="_blank">
-                    <svg height="32" width="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><g><path d="M32,30c0,1.104-0.896,2-2,2H2c-1.104,0-2-0.896-2-2V2c0-1.104,0.896-2,2-2h28c1.104,0,2,0.896,2,2V30z" /><g><rect fill="#FFFFFF" height="14" width="4" x="7" y="11"/><path d="M20.499,11c-2.791,0-3.271,1.018-3.499,2v-2h-4v14h4v-8c0-1.297,0.703-2,2-2c1.266,0,2,0.688,2,2v8h4v-7    C25,14,24.479,11,20.499,11z" fill="#FFFFFF"/><circle cx="9" cy="8" fill="#FFFFFF" r="2"/></svg>
-                </a>
-            </p>
-        </div>
+        <p>Hi!</p>
+        <p>I am <strong>Simon Martin</strong>,</p>
+        <p>a <strong>software developer</strong></p>
+        <p>and <strong>self driving cars</strong> student,</p>
+        <p>living in <strong>Madrid</strong></p>
+
+        <br>
+        <p id="contact">
+            <a href="https://github.com/oleurud" target="_blank">
+                <img src="github.png">
+            </a>
+            <a href="https://twitter.com/oleurud" target="_blank">
+                <img src="twitter.png">
+            </a>
+            <a href="https://www.linkedin.com/in/oleurud" target="_blank">
+                <img src="linkedin.png">
+            </a>
+            <a href="https://profiles.udacity.com/p/u82863" target="_blank">
+                <img src="udacity.png">
+            </a>
+        </p>
     </div>
 </body>
 </html>
