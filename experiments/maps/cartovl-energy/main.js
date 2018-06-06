@@ -13,43 +13,60 @@ carto.setDefaultAuth({
 });
 
 
-const types = [
-    'Hydro',
-    'Solar',
-    'Wind',
-    'Oil',
-    'Gas',
-    'Coal',
-    'Biomass',
-    'Waste',
-    'Nuclear',
-    'Geothermal',
-    'Cogeneration'
-];
+// const types = [
+//     'Hydro',
+//     'Solar',
+//     'Wind',
+//     'Oil',
+//     'Gas',
+//     'Coal',
+//     'Biomass',
+//     'Waste',
+//     'Nuclear',
+//     'Geothermal',
+//     'Cogeneration'
+// ];
 
 
-
+/* SOURCES */
 const energySource = new carto.source.SQL(`
-    select *
-    from global_power_plant_database
-    where estimated_generation_gwh is not null
-    order by estimated_generation_gwh desc
-    limit 10
+    SELECT *
+    FROM global_power_plant_database
+    WHERE estimated_generation_gwh is not null
+    and capacity_mw is not null
 `);
+
+const renewableEnergySource = new carto.source.SQL(`
+    SELECT *
+    FROM global_power_plant_database
+    WHERE estimated_generation_gwh is not null
+    AND capacity_mw is not null 
+    AND fuel1 IN ('Hydro', 'Solar', 'Wind', 'Biomass', 'Geothermal')
+`);
+
+const nonRenewableEnergySource = new carto.source.SQL(`
+    SELECT *
+    FROM global_power_plant_database
+    WHERE estimated_generation_gwh is not null
+    AND capacity_mw is not null 
+    AND fuel1 NOT IN ('Hydro', 'Solar', 'Wind', 'Biomass', 'Geothermal')
+`);
+
 
 const s = carto.expressions;
 
 
-
-
 const energyViz = new carto.Viz(`
     @name: $name
+    @capacity_mw: $capacity_mw
     @estimated_generation_gwh: $estimated_generation_gwh
     @fuel1: $fuel1
-    @totalgwh: viewportSum($capacity_mw)
+    @totalGeneration: viewportSum($estimated_generation_gwh)
+    @totalCapacity: viewportSum($capacity_mw)
 
     color: ramp($fuel1, vivid)
-    width: $estimated_generation_gwh / 1000
+    strokeWidth: 0 
+    width: sqrt($capacity_mw) / 3.14
 `);
 
 
@@ -57,12 +74,15 @@ const energyLayer = new carto.Layer('energyLayer', energySource, energyViz);
 energyLayer.addTo(map);
 
 
-/* WIDGETS */
-document.getElementById('totalContent').innerHTML = energyViz.variables.totalgwh.eval()
 
+/* WIDGETS */
+document.getElementById('total').innerHTML = `
+    <h3>POWER PLANTS</h3>
+    <p>Capacity: ${energyViz.variables.totalCapacity.eval()} MW</p>
+    <p>Generation: ${energyViz.variables.totalGeneration.eval()} GWh</p>
+`;
 
 /* ACTIONS */
-
 const interactivity = new carto.Interactivity(energyLayer);
 interactivity.on('featureHover', event => {
     let biggest = event.features[0];
@@ -73,15 +93,28 @@ interactivity.on('featureHover', event => {
     }
 
     if (biggest) {
-        document.getElementById('infoContent').innerHTML = `
-            <div class="element">
+        document.getElementById('info').innerHTML = `
+            <div class="container">
                 <h3 class="h3">${biggest.variables.name.value}</h3>
-                <p class="open-sans">Energy: ${Number(biggest.variables.estimated_generation_gwh.value).toFixed(0)} GWh</p>
-                <p class="open-sans">Type: ${biggest.variables.fuel1.value}</p>
+                <p>Type: ${biggest.variables.fuel1.value}</p>
+                <p>Capacity: ${Number(biggest.variables.capacity_mw.value).toFixed(0)} GWh</p>
+                <p>Generation: ${Number(biggest.variables.estimated_generation_gwh.value).toFixed(0)} GWh</p>
             </div>
         `;
     }
 })
 
-interactivity.on('featureLeave', () => document.getElementById('infoContent').innerHTML = '');
+interactivity.on('featureLeave', () => document.getElementById('info').innerHTML = '');
 
+
+function allTypes() {
+    energyLayer.update(energySource, energyViz);
+}
+
+function renewableTypes() {
+    energyLayer.update(renewableEnergySource, energyViz);
+}
+
+function nonRenewableTypes() {
+    energyLayer.update(nonRenewableEnergySource, energyViz);
+}

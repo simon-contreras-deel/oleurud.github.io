@@ -15,14 +15,25 @@
 <body>
     <!-- Map goes here -->
     <div id="map"></div>
-    <div id="info" class="container">
-        <h3></h3>
-        <div id="infoContent"></div>
+    <div id="total" class="box container"></div>
+    <div id="renewable" class="box container">
+        <h3>Type:</h3>
+        <ul class="actions">
+            <li>
+                <input type="radio" name="source" onclick="allTypes()" checked>
+                <label for="all">All types</label>
+            </li>
+            <li>
+                <input type="radio" name="source" onclick="renewableTypes()">
+                <label for="europe">Renewables</label>
+            </li>
+            <li>
+                <input type="radio" name="source" onclick="nonRenewableTypes()">
+                <label for="spain">Non-renewables</label>
+            </li>
+        </ul>
     </div>
-    <div id="total" class="widget container">
-        <h3>Total energy</h3>
-        <p><span id="totalContent"></span> GWh</p>
-    </div>
+    <div id="info" class="box"></div>
 
     <script src="main.js"></script>
 </body>

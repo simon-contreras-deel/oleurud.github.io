@@ -16,15 +16,29 @@ body {
     width: 100%;
 }
 
-#info {
+.box {
     position: absolute;
-    bottom: 24px;
-    left: 24px;
-    height: 250px;
     width: 250px;
     z-index: 2;
     background: rgba(0, 0, 0, 0.8);
     overflow: auto;
+    padding: 20px;
+}
+
+#total {
+    top: 20px;
+    left: 20px;
+    height: 190px;
+}
+
+#info {
+    bottom: 20px;
+    left: 20px;   
+}
+
+#renewable {
+    top: 220px;
+    left: 20px;       
 }
 
 .h3 {
@@ -35,21 +49,6 @@ body {
     margin-bottom: 8px;
 }
 
-.container {
-    padding: 20px
-}
-
-.element {
-    padding: 0 10px;
-}
-
-.widget {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    height: 250px;
-    width: 250px;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.8);
-    overflow: auto;
+ul {
+    list-style: none;
 }
