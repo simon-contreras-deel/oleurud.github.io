@@ -28,16 +28,16 @@ body {
 #total {
     top: 20px;
     left: 20px;
-    height: 190px;
+    height: 325px;
 }
 
 #info {
-    bottom: 20px;
-    left: 20px;   
+    top: 20px;
+    right: 20px;   
 }
 
 #renewable {
-    top: 220px;
+    bottom: 20px;
     left: 20px;       
 }
 
