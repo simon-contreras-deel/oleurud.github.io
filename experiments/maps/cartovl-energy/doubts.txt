@@ -1,0 +1,3 @@
+- viewportSum funciona?
+- se puede mostar/ocultar una layer?
+
