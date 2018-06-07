@@ -12,8 +12,6 @@ carto.setDefaultAuth({
     apiKey: 'default_public'
 });
 
-const s = carto.expressions;
-
 
 /* SOURCES */
 
@@ -52,7 +50,6 @@ const renewableEnergyViz = new carto.Viz(`
     color: ramp($fuel1, TEALGRN)
     strokeWidth: 0 
     width: sqrt($capacity_mw) / 3.14
-    resolution: 5
 `);
 
 const nonRenewableEnergyViz = new carto.Viz(`
@@ -65,8 +62,7 @@ const nonRenewableEnergyViz = new carto.Viz(`
 
     color: ramp($fuel1, BURG)
     strokeWidth: 0 
-    width: sqrt($capacity_mw) / 3.14
-    resolution: 64
+    width: sqrt($capacity_mw) / 3.14 /viewportMax(sqrt($capacity_mw)) *50
 `);
 
 
@@ -77,17 +73,6 @@ const renewableEnergyLayer = new carto.Layer('renewableEnergyLayer', renewableEn
 renewableEnergyLayer.addTo(map);
 
 
-/* WIDGETS */
-document.getElementById('total').innerHTML = `
-    <h3>POWER PLANTS</h3>
-    <hr>
-    <p><strong>Renewable</strong>:</p>
-    <p>Capacity: ${renewableEnergyViz.variables.totalCapacity.eval()} MW</p>
-    <p>Estimated: ${renewableEnergyViz.variables.totalGeneration.eval()} GWh</p>
-    <p><strong>Non-renewable</strong>:</p>
-    <p>Capacity: ${nonRenewableEnergyViz.variables.totalCapacity.eval()} MW</p>
-    <p>Estimated: ${nonRenewableEnergyViz.variables.totalGeneration.eval()} GWh</p>
-`;
 
 /* ACTIONS */
 let biggest;
@@ -97,21 +82,20 @@ interactivity.on('featureEnter', event => {
     if (!biggest) {
         biggest = event.features[0];
         for (let feature of event.features) {
-            if(feature.variables.estimated_generation_gwh.value > biggest.variables.estimated_generation_gwh.value) {
+            if (feature.variables.estimated_generation_gwh.value > biggest.variables.estimated_generation_gwh.value) {
                 biggest = feature;
             }
         }
-    
+
         if (biggest) {
             document.getElementById('info').innerHTML = `
                 <div class="container">
                     <h3 class="h3">${biggest.variables.name.value}</h3>
                     <p>Type: ${biggest.variables.fuel1.value}</p>
                     <p>Capacity: ${Number(biggest.variables.capacity_mw.value).toFixed(0)} GWh</p>
-                    <p>Generation: ${Number(biggest.variables.estimated_generation_gwh.value).toFixed(0)} GWh</p>
                 </div>
             `;
-    
+
             biggest.color.blendTo('opacity(DeepPink, 0.5)', delay)
             biggest.strokeWidth.blendTo('4', delay);
             biggest.strokeColor.blendTo('opacity(DeepPink, 0.8)', delay);
@@ -130,17 +114,29 @@ interactivity.on('featureLeave', () => {
 });
 
 
+renewableEnergyLayer.on('updated', () => {
+    document.getElementById('total').innerHTML = `
+        <h3>POWER PLANTS</h3>
+        <hr>
+        <p><strong>Renewable</strong>:</p>
+        <p>${Number(renewableEnergyViz.variables.totalCapacity.eval().toFixed(0)).toLocaleString()} MW</p>
+        <p><strong>Non-renewable</strong>:</p>
+        <p>${Number(nonRenewableEnergyViz.variables.totalCapacity.eval().toFixed(0)).toLocaleString()} MW</p>
+    `;
+});
+
+
 function allTypes() {
     map.setLayoutProperty('nonRenewableEnergyLayer', 'visibility', 'visible');
-    map.setLayoutProperty('renewableEnergyLayer', 'visibility', 'visible');    
+    map.setLayoutProperty('renewableEnergyLayer', 'visibility', 'visible');
 }
 
 function renewableTypes() {
     map.setLayoutProperty('nonRenewableEnergyLayer', 'visibility', 'none');
-    map.setLayoutProperty('renewableEnergyLayer', 'visibility', 'visible');    
+    map.setLayoutProperty('renewableEnergyLayer', 'visibility', 'visible');
 }
 
 function nonRenewableTypes() {
-    map.setLayoutProperty('renewableEnergyLayer', 'visibility', 'none');    
+    map.setLayoutProperty('renewableEnergyLayer', 'visibility', 'none');
     map.setLayoutProperty('nonRenewableEnergyLayer', 'visibility', 'visible');
 }
