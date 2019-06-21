@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Pinares</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Space Missions">
+    <meta name="apple-mobile-web-app-title" content="Space Missions">
+    <meta name="theme-color" content="#FF9800">
+    <meta name="msapplication-navbutton-color" content="#FF9800">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/index.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" sizes="128x128" href="/images/touch/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/images/touch/icon-128x128.png">
+    <link rel="icon" sizes="192x192" href="icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/images/touch/icon-192x192.png">
+    <link rel="icon" sizes="256x256" href="/images/touch/icon-256x256.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="/images/touch/icon-256x256.png">
+    <link rel="icon" sizes="384x384" href="/images/touch/icon-384x384.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="/images/touch/icon-384x384.png">
+    <link rel="icon" sizes="512x512" href="/images/touch/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/images/touch/icon-512x512.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <section id="installBanner" class="banner">
+        <button id="installBtn">Install app</button>
+    </section>
+
+    <main role="main" class="container">
+
+        <div class="starter-template">
+            <h1>Bootstrap starter template</h1>
+            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text
+                and a mostly barebones HTML document.</p>
+        </div>
+
+    </main>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(reg => {
+                        console.log('Service worker registered! 😎', reg);
+                    })
+                    .catch(err => {
+                        console.log('😥 Service worker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+
+    <script>
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', event => {
+
+            // Prevent Chrome 67 and earlier from automatically showing the prompt
+            event.preventDefault();
+
+            // Stash the event so it can be triggered later.
+            deferredPrompt = event;
+
+            // Attach the install prompt to a user gesture
+            document.querySelector('#installBtn').addEventListener('click', event => {
+
+                // Show the prompt
+                deferredPrompt.prompt();
+
+                // Wait for the user to respond to the prompt
+                deferredPrompt.userChoice
+                    .then((choiceResult) => {
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('User accepted the A2HS prompt');
+                        } else {
+                            console.log('User dismissed the A2HS prompt');
+                        }
+                        deferredPrompt = null;
+                    });
+            });
+
+            // Update UI notify the user they can add to home screen
+            document.querySelector('#installBanner').style.display = 'flex';
+        });
+    </script>
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
