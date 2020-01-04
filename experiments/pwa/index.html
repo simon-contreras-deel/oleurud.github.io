@@ -15,13 +15,12 @@
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Space Missions">
-    <meta name="apple-mobile-web-app-title" content="Space Missions">
-    <meta name="theme-color" content="#FF9800">
-    <meta name="msapplication-navbutton-color" content="#FF9800">
+    <meta name="application-name" content="pinares-pwa">
+    <meta name="apple-mobile-web-app-title" content="pinares-pwa">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-navbutton-color" content="#ffffff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-starturl" content="/index.html">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="icon" sizes="128x128" href="images/touch/icon-128x128.png">
     <link rel="apple-touch-icon" sizes="128x128" href="images/touch/icon-128x128.png">
@@ -89,17 +88,34 @@
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
                 navigator.serviceWorker.register('service-worker.js')
-                    .then(reg => {
-                        console.log('Service worker registered! 😎', reg);
-                    })
-                    .catch(err => {
-                        console.log('😥 Service worker registration failed: ', err);
-                    });
+                    .then(reg => console.log('Service worker registered! 😎', reg))
+                    .catch(err => console.log('😥 Service worker registration failed: ', err));
             });
         }
     </script>
 
     <script>
+        if (!('Notification' in window)) {
+            console.log('This browser does not support notifications!');
+        } else {
+            Notification.requestPermission(status => {
+                console.log('Notification permission status:', status);
+            });
+
+            if (Notification.permission == 'granted') {
+                navigator.serviceWorker.getRegistration().then(reg => {
+
+                    reg.showNotification('Hello world!');
+                });
+            }
+        }
+
+
+
+    </script>
+
+    <script>
+
         let deferredPrompt;
         window.addEventListener('beforeinstallprompt', event => {
 
