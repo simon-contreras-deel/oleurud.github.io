@@ -5,44 +5,30 @@
  *  that can be found in the LICENSE file in the root of the source
  *  tree.
  */
+
  button {
-  margin: 0 20px 0 0;
-  width: 83px;
+  margin: 20px 10px 0 0;
+  width: 100px;
 }
 
-button#hangupButton {
-    margin: 0;
+div#buttons {
+  margin: 0 0 20px 0;
+}
+
+div#status {
+  height: 2em;
+  margin: 1em 0 0 0;
+}
+
+input#audio {
+  margin: 0 0.5em 0 0;
+  position: relative;
+  top: -1px;
 }
 
 video {
   --width: 45%;
   width: var(--width);
   height: calc(var(--width) * 0.75);
-  margin: 0 0 20px 0;
-  vertical-align: top;
 }
 
-video#localVideo {
-  margin: 0 20px 20px 0;
-}
-
-div.box {
-  margin: 1em;
-}
-
-@media screen and (max-width: 400px) {
-  button {
-    width: 83px;
-    margin: 0 11px 10px 0;
-  }
-
-  video {
-    height: 90px;
-    margin: 0 0 10px 0;
-    width: calc(50% - 7px);
-  }
-  video#localVideo {
-    margin: 0 10px 20px 0;
-  }
-
-}
