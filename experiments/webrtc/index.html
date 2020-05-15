@@ -3,40 +3,25 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="description" content="WebRTC code samples">
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+  <title>Realtime communication with WebRTC</title>
 
-  <title>Peer connection</title>
-
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="/css/main.css" />
 
 </head>
 
 <body>
 
-  <div id="container">
-    <div id="videos">
-      <video id="video1" playsinline autoplay muted></video>
-      <video id="video2" playsinline autoplay></video>
-    </div>
+  <h1>Realtime communication with WebRTC</h1>
 
-    <section><input type="checkbox" id="audio"><label for="audio">Include audio (supported in Chrome 49 and
-        above)</label></section>
-
-    <div id="buttons">
-      <button id="start">Start</button>
-      <button id="call" disabled>Call</button>
-      <button id="insertRelay" disabled>Insert relay</button>
-      <button id="hangup" disabled>Hang Up</button>
-    </div>
-
-    <div id="status"></div>
+  <div id="videos">
+    <video id="localVideo" autoplay muted playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
   </div>
 
+  <!-- This file is automatically added/served when running "node index.js". -->
+  <script src="/socket.io/socket.io.js"></script>
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-  <script src="videopipe.js" async></script>
-  <script src="main.js" async></script>
+  <script src="js/main.js"></script>
 
 </body>
 
