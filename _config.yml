@@ -1,5 +1,5 @@
 # Site settings
-title:       Simon Martin
+title:       Simon Martin | @oleurud
 email:
 author:      oleurud
 description: "Homepage of Simon Martin | @oleurud"
@@ -13,7 +13,7 @@ google_analytics:
 
 # Optional features
 animated:             true
-show_related_posts:   true
+show_related_posts:   false
 show_post_footers:    false
 show_social_icons:    true
 
