@@ -5,8 +5,8 @@ permalink: /about/
 tags: about
 ---
 
-I am Simon Martin, a software developer living in Madrid. I love music, beer and tech.
+I'm Simon Martin, a remote senior software developer living in Santander (Spain). I love music, craft beer and technology.
 
-As a developer, I do mostly backend, but also frontend and even devops. I am proud of creating products that help people, some of them with millions of requests per day. I can code in several languages and platforms: Node.js, Vue.js and Python are the ones I have used the most in the last years. I did JAVA, PHP, or C in the past. I have worked for several startups, big companies and I have founded mine twice.
+As a developer, I do mainly backend, but also frontend and even devops. I'm proud of creating products that help people, some of them with millions of requests per day. I can code in several languages and platforms: Node.js, Vue.js and Python are the ones I've used the most in the last years. In the past I did JAVA, PHP or C. I have experience using databases like PostgreSQL, Redis or MongoDB. I have worked for several startups, big companies and founded my own twice.
 
-And as a person, I hope to be a good father and friend. But you'll have to ask them. I'm usually honest and a bit blabbermouth, but I am improving it. When I am not creating a new product, I am enjoying music or drinking a beer.
+As a person, I hope to be a good father and friend, but you will have to ask them :). I tend to be honest, direct when necessary and a bit mouthy, but I'm getting better at it. When I'm not creating a new product, I'm enjoying music or tasting a good beer.
