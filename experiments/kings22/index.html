@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reyes 2022</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/kings/style.css" />
+</head>
+<body>
+    <h1>Reyes 2022</h1>
+
+    <!-- ********************************** -->
+    <!-- ********************************** -->
+    <!-- ********************************** -->
+    <!-- ********************************** -->
+    <!-- contraseña: vivajuancarlitrosprimero -->
+    <!-- ********************************** -->
+    <!-- ********************************** -->
+    <!-- ********************************** -->
+    <!-- ********************************** -->
+
+    <div id="step1">
+        <img src="jc.jpeg">
+        <p>Como buen tragon, me he comido a los reyes magos estando en oriente, pero tranquila rojita, como soy bueno, vengo yo a traer los regalos.</p>
+        <p>Has sido buena este año?</p>
+        <button onclick="show2()">Si</button>
+        <button onclick="show666()">No</button>
+    </div>
+
+    <div id="step2" style="display: none;">
+        <img src="doubt1.gif">
+        <p>Seguro seguro? No "me suena" muy creible...</p>
+        <button onclick="show3()">Si</button>
+        <button onclick="show666()">No</button>
+    </div>
+
+    <div id="step3" style="display: none;">
+        <img src="doubt2.gif">
+        <p>Seguro? A pesar de haber metido un pedazo de armatoste en forma de piano a nuestra casa?</p>
+        <button onclick="show4()">Si</button>
+        <button onclick="show666()">No</button>
+    </div>
+
+    <div id="step666" style="display: none;">
+        <p>Pues como tu Rey 2022 que soy, te he traido carbon imaginario. El de verdad tambien me lo he comido.</p>
+        <p>Esta rico? Que lo disfrutes</p>
+        <img src="jc2.jpeg">
+    </div>
+
+    <div id="price" style="display: none;">
+        <img src="jc3.jpeg">
+        <p>Claro que si!</p>
+        <img src="curso.png" alt="curso piano" />
+    </div>
+
+    <script>
+        function show2 () {
+            document.getElementById("step1").style.display = "none";
+            document.getElementById("step2").style.display = "block";
+        }
+
+        function show3 () {
+            document.getElementById("step2").style.display = "none";
+            document.getElementById("step3").style.display = "block";
+        }
+
+        function show4 () {
+            document.getElementById("step3").style.display = "none";
+            document.getElementById("price").style.display = "block";
+        }
+
+        function show666 () {
+            document.getElementById("step1").style.display = "none";
+            document.getElementById("step2").style.display = "none";
+            document.getElementById("step3").style.display = "none";
+            document.getElementById("step666").style.display = "block";
+        }
+    </script>
+</body>
+
+<style>
+    img {
+        width:100%; max-width: 800px;
+    }
+</style>
