@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Starting a company now
-date:       2022-02-26 00:00
+date:       2022-02-14 00:00
 summary:    As a developer, you have a lot of good opportunities out there right now, why make life difficult?
 categories: Personal
 ---
