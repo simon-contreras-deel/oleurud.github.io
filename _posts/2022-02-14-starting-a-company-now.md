@@ -6,7 +6,7 @@ summary:    As a developer, you have a lot of good opportunities out there right
 categories: Personal
 ---
 
-It is true right now as a spanish developer, you can get opportunities unthinkable a few years ago in well-known US companies such as Meta, Amazon, Shopify, ... that were previously only for those who were the best of the best. So, why? Why make your life harder creating a company?
+Right now, as a Spanish developer, you can get opportunities that were unthinkable a few years ago. And you can do it in American companies as well known as Meta, Amazon, Shopify, ... Before, these opportunities were only for those who were the best of the best. So, assuming you could get one of those opportunities: why complicate your life by creating a company?
 
 I love to build things. It is as simple as that. This is the fastest explanation. Let's go to the long one:
 

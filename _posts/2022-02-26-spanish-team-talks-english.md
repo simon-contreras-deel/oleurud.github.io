@@ -8,9 +8,9 @@ categories: Personal
 
 In the beginning, my teammate Ibra told me he thought we should talk in English all the time. Even more, all the company should do it and they will be happy with that. Take into account, in Stomio most of the team is Spanish.
 
-To be honest, as usual, I was not sure about it. That sounded weird to me and could be understood as us pretending to be cool. In fact, when I explain that to some spanish friend, someone used to tell me that, or at least, I can see it in their faces they are thinking it :)
+To be honest, as usual, I was not sure about it. That sounded weird to me and could be understood as us pretending to be cool. In fact, when I explain that to some friend, someone used to tell me that, or at least, I can see it in their faces they are thinking it :)
 
-But for us, it was clear, there is a problem for every spanish person who did not live out of Spain in a country where English was the main language. We can have a "no bad" level because you studied it, more or less have a basic understanding, but when you are going to talk, you are not able to make it. Why? You did not do it before. Never. I don't want to talk about why it is happening to us, but this is a blocker for us.
+There is a problem for every Spaniard who has not lived outside Spain in a country where English is the main language. You can have a "not bad" level because you have studied it, you more or less have a basic understanding, but when you go to speak, you are not able to do it. Why? You have not done it before. Never. This is a blocker for us.
 
 So, the more we thought about it, the more sense it made. The best way of improving on something is by trying it. The more, the better. We will improve with the help of each other. Finally, we started Stomio talking in English. Not Spanish allowed.
 
