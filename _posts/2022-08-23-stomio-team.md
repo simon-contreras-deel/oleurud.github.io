@@ -14,7 +14,7 @@ We started with a frontend engineer. To be honest, it was easy: Jaime, one of my
 
 Then, we started to look for a product designer. I was talking to a lot of UX and product designers for some days without success. Also, being an engineer this is not easy and the doubt of being able to value these profiles properly was there... until I met Angela. After 5 minutes of conversation, I was sure she was the one for the role: passionate, direct, clever, knows what she wants even being so early in her career, ...  And I think she thought the same, after some other conversations, she was on the team. When I was meeting with Angela, who told me the UI part is not her preference, Ibrahim was talking with Cintia: an amazing UI designer with an incredible portfolio, great potential, and a strong desire to grow. Again, it was a super easy decision. After days of making interviews, finally, the pieces fit together.
 
-Some months later, we were lucky to add Dani to our team. Previously, Dani and I were teammates, he was even leading my team at CARTO. I knew he was the perfect person to create, maintain and scale the foundations of our platform and it was an amazing pleasure to know he wanted to join us :)
+Some months later, we were lucky to add Dani to our team. Previously, Dani and I were teammates, he was even leading my team at CARTO. I knew he is the perfect person to create, maintain and scale the foundations of our platform and it was an amazing pleasure to know he wanted to join us :)
 
 So, what I have learned from the process is **trust your network, talk to as many people as you can, trust your own judgment, insist, and eventually you will find the person you really want to work with**.
 
