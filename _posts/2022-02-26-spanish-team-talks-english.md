@@ -3,7 +3,7 @@ layout:     post
 title:      A Spanish team talking in English?
 date:       2022-02-26 00:00
 summary:    In Stomio, everyone talks in English, even in a meeting between 2 Spanish people
-categories: Personal
+categories: Personal, Stomio, English
 ---
 
 In the beginning, my teammate Ibra told me he thought we should talk in English all the time. Even more, all the company should do it and they will be happy with that. Take into account, in Stomio most of the team is Spanish.
