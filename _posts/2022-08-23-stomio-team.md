@@ -2,7 +2,7 @@
 layout:     post
 title:      The Stomio team
 date:       2022-08-23 00:00
-summary:    Back in August 2021, we started Stomio. What an amazing year. Thank you to the entire team for being part of this adventure. The best is yet to come, let's enjoy the journey and learn together
+summary:    Back in August 2021, we started Stomio. After a year, I would like to tell you how we built our initial team (our first big success) and my learnings in the process. Thanks to the team for being part of this adventure.
 categories: Personal, Stomio
 ---
 
@@ -18,4 +18,4 @@ Some months later, we were lucky to add Dani to our team. Previously, Dani and I
 
 So, what I have learned from the process is: trust your network, talk to as many people as you can, trust your own judgment, insist, and eventually you will find the person you really want to work with.
 
-Thank you to the entire team for being part of this adventure. The best is yet to come, let's enjoy the journey and learn together.
+Thank you to the team for being part of this adventure. The best is yet to come, let's enjoy the journey and learn together.
