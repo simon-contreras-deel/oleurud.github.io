@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Creo que voy a seguir comprando en una web horrible otros 5 años
-date:       2023-02-22 00:00
+date:       2023-02-11 00:00
 summary:    Despues de ver la entrevista a Juana Roig de Mercadona, creo que voy a seguir comprando en una web horrible otros 5 años porque parece que "no tienen competencia"
 categories: Negocio
 ---
