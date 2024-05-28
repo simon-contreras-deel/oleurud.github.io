@@ -5,10 +5,16 @@ permalink: /about/
 tags: about
 ---
 
-I'm Simon Martin, a remote senior software developer living in Santander (Spain). I love music, craft beer, business and technology.
+Hi, I’m Simon Martin, a software developer based in Santander, Spain.
 
-I have never wanted to be an expert in anything, but to have a broad and generalist knowledge of business and engineering. Therefore, I have worked for different types of companies, from startups to large companies, in different sectors (such as travel, advertising, GIS or car insurance), on-site and remote and in different roles. And I have founded my own company twice.
+I have played many roles in my career, mainly as a backend engineer, but also as a full stack developer, tech lead and engineering manager. My tech journey has been diverse, spanning sectors like travel, advertising, GIS, telecom, car insurance, product testing or customer feedback.
 
-My role in companies is mainly related to technical side doing backend, frontend or even devops, but what I really like is to make teams better working with other people. If you are curious about specific technologies, I can code in several languages and platforms: Node.js, Vue.js and Python are the ones I have used the most in the last years. In the past I have done JAVA, PHP or C. I have experience using databases like PostgreSQL, Redis or MongoDB.
+My main skills:
 
-As a person, I try my best to be a good father and friend, but you'll have to ask them :). I tend to be honest, direct when necessary and a bit mouthy, but I'm getting better at it. When I'm not creating a new product, I am enjoying music or tasting a good beer.
+	•	Product-oriented: I don’t understand technology any other way.
+	•	Business-oriented: I’ve started a company twice and worked in several startups, helping them (sometimes 🙂) move from 0 to 1. Product-led, SaaS, B2B, B2C.
+	•	Versatile developer: I can create products from scratch or work with large legacy codebases. I can design simple APIs or work with complex architectures.
+	•	Versatile tech stack: I’m skilled in Node.js and Vue.js, but I quickly pick up new technologies. I have worked with Python, Java, PHP, C, and others. My database experience includes PostgreSQL, Redis, and MongoDB. I’ve used AWS and Google Cloud.
+	•	Team player and leader: Whether as an individual contributor or leading a team, I enjoy mentoring junior developers, improving processes, and helping teams reach their full potential to deliver the best product possible.
+
+I’m a father of two amazing kids, a car enthusiast, and I love craft beer, music, and tech. I believe in being straightforward and honest, and I’m always up for a good conversation over a great beer.
