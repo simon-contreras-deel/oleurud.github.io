@@ -5,9 +5,9 @@ permalink: /about/
 tags: about
 ---
 
-Hi, I’m Simon Martin, a software developer based in Santander, Spain.
+Hi, I’m Simon Martin, a software developer based in Cantabria, Spain.
 
-I have played many roles in my career, mainly as a backend engineer, but also as a full stack developer, tech lead and engineering manager. My tech journey has been diverse, spanning sectors like travel, advertising, GIS, telecom, insurance, and product management.
+I have played many roles in my career, mainly as a backend engineer, but also as a full stack developer, tech lead and engineering manager. My tech journey has been diverse, spanning sectors like travel, advertising, GIS, telecom, insurance, and hardware testing.
 
 My main skills:
 
