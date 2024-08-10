@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      If I were to build a new B2B product
-date:       2024-08-10 00:00
+date:       2024-08-09 00:00
 summary:    In the last few months, I've been thinking about what we could have done differently at Stomio to grow faster. Here are some of the ideas if I were starting a new project
 categories: Personal, Stomio, Business
 ---
