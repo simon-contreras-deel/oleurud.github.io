@@ -6,7 +6,6 @@ summary:    In the last few months, I've been thinking about what we could have 
 categories: Personal, Stomio, Business
 ---
 
-## Constrains or disclaimer
 First of all, there are people with more experience and success than me, like: [levelsio](https://x.com/levelsio), [Marc Lou](https://x.com/marc_louvion), or [Greg Isenberg](https://x.com/gregisenberg). These are just my learnings from founding companies.
 
 Second, company size matters. It's different if you want to create a solo company, a company of 20-50 people, or a fast-growing startup. Each of these cases is unique. I'll focus more on the second: a small to medium-sized company backed by VCs.
